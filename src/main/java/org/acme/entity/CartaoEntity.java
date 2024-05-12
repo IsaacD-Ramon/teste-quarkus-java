@@ -1,10 +1,7 @@
 package org.acme.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 
@@ -13,8 +10,7 @@ import java.util.Date;
 @Table(name = "cartao")
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class CartaoEntity {
 
     @Id
