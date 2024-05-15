@@ -7,7 +7,6 @@ import lombok.extern.jackson.Jacksonized;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Jacksonized
 @Data
 public class QuickSetupDTO {
 
@@ -16,5 +15,4 @@ public class QuickSetupDTO {
     private ContaDTO contaDTO;
 
     private CartaoDTO cartaoDTO;
-
 }

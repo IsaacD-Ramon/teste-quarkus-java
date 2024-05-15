@@ -5,15 +5,12 @@ import lombok.*;
 
 import java.util.List;
 
-@Entity
-@Table(name = "conta")
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class ContaEntity {
 
-    @Id
-    @GeneratedValue
     private Long id;
 
     private String agencia;
@@ -22,10 +19,5 @@ public class ContaEntity {
 
     private Float saldo;
 
-    @ManyToOne
-    @JoinColumn(name = "pessoaId")
-    private  PessoaEntity pessoa;
-
-    @OneToMany(mappedBy = "conta", cascade = CascadeType.ALL)
-    private List<CartaoEntity> cartao;
+    private  Long pessoaId;
 }

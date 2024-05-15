@@ -1,9 +1,15 @@
 package org.acme.repository;
 
-import io.quarkus.hibernate.orm.panache.PanacheRepository;
-import jakarta.enterprise.context.ApplicationScoped;
+import org.acme.dto.ContaDTO;
 import org.acme.entity.ContaEntity;
 
-@ApplicationScoped
-public class ContaRepository implements PanacheRepository<ContaEntity> {
+public interface ContaRepository {
+
+    ContaEntity cadastrarConta(ContaEntity conta);
+
+    ContaEntity buscarContaId(Long id);
+
+    void editarConta(ContaDTO contaDTO, Long id);
+
+    void alterarSaldo(Float deposito, Long id);
 }

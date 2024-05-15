@@ -4,21 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.jackson.Jacksonized;
-import org.acme.entity.ContaEntity;
-
-import java.util.Date;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Jacksonized
 @Data
-public class PessoaDTO {
+public class DepositoLimiteDTO {
 
-    private String nome;
-
-    private String cpf;
-
-    private String nascimento;
-
+    private Float valor;
 }

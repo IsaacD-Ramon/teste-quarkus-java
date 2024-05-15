@@ -15,7 +15,7 @@ public class CartaoDTO {
 
     private Integer numero;
 
-    private Date validade;
+    private String validade;
 
     private String nomeImpreso;
 

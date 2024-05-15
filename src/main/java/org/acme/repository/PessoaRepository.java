@@ -1,9 +1,11 @@
 package org.acme.repository;
 
-import io.quarkus.hibernate.orm.panache.PanacheRepository;
-import jakarta.enterprise.context.ApplicationScoped;
+import org.acme.dto.PessoaDTO;
 import org.acme.entity.PessoaEntity;
 
-@ApplicationScoped
-public class PessoaRepository implements PanacheRepository<PessoaEntity> {
+
+public interface PessoaRepository {
+    PessoaEntity CadastrarPessoa(PessoaEntity pessoa);
+    PessoaEntity buscarPessoaCpf(String cpf);
+    void EditarPessoa(PessoaDTO pessoa, Long id);
 }

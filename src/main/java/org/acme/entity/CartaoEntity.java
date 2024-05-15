@@ -5,21 +5,17 @@ import lombok.*;
 
 import java.util.Date;
 
-
-@Entity
-@Table(name = "cartao")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class CartaoEntity {
 
-    @Id
-    @GeneratedValue
+
     private Long id;
 
     private Integer numero;
 
-    private Date validade;
+    private String validade;
 
     private String nomeImpreso;
 
@@ -27,7 +23,5 @@ public class CartaoEntity {
 
     private String bandeira;
 
-    @ManyToOne
-    @JoinColumn(name = "contaId")
-    private ContaEntity conta;
+    private Long contaId;
 }

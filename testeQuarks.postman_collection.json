@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "e865898b-2118-4c72-855e-99a0923bef83",
+		"name": "testeQuarks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5126157"
+	},
+	"item": [
+		{
+			"name": "EndpointPessoa",
+			"item": [
+				{
+					"name": "cadatrar pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Isaac\",\r\n    \"cpf\": \"06015588390\",\r\n    \"nascimento\": \"12/12/1996\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pessoa/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pessoa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPessoaCpf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/pessoa/96015588390",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pessoa",
+								"96015588390"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditarPessoa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"liene\",\r\n    \"cpf\": \"96015588390\",\r\n    \"nascimento\": \"12/12/2002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pessoa/99",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pessoa",
+								"99"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EndpointConta",
+			"item": [
+				{
+					"name": "cadastrarConta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agencia\":\"00000\",\r\n    \"conta\": 1111,\r\n    \"saldo\":12.15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/conta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"conta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarContaId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/conta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"conta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarConta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"agencia\":\"00000\",\r\n    \"conta\": 1111,\r\n    \"saldo\":12.15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/conta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"conta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterarSaldo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deposito\":12.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/conta/alterarSaldo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"conta",
+								"alterarSaldo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EndPointCartao",
+			"item": [
+				{
+					"name": "CadastrarCartao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\":132132,\r\n    \"validade\":\"12/12/12\",\r\n    \"nomeImpreso\":\"teste\",\r\n    \"limite\":12.12,\r\n    \"bandeira\":\"mastercard\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cartao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cartao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarCartaoId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cartao/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cartao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarCartao",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\":132132,\r\n    \"validade\":\"12/12/12\",\r\n    \"nomeImpreso\":\"teste\",\r\n    \"limite\":12.12,\r\n    \"bandeira\":\"mastercard\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cartao/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cartao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterarLimite",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"limite\":12.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cartao/alterarLimite/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cartao",
+								"alterarLimite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QuickSetup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"pessoa\":{\r\n     \"nome\": \"Isaac\",\r\n    \"cpf\": \"06015588390\",\r\n    \"nascimento\": \"12/12/1996\"  \r\n    },\r\n    \"conta\":{\r\n    \"agencia\":\"00000\",\r\n    \"conta\": 1111,\r\n    \"saldo\":12.15\r\n    },\r\n    \"cartao\":{\r\n    \"numero\":132132,\r\n    \"validade\":\"12/12/12\",\r\n    \"nomeImpreso\":\"teste\",\r\n    \"limite\":12.12,\r\n    \"bandeira\":\"mastercard\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/QuickSetup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"QuickSetup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comprarCreditoDebito",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
